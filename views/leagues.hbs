@@ -1,0 +1,19 @@
+<div id="league">
+  <h1>LEAGUES</h1>
+
+  {{#each stats}}
+    <div class="each-league">
+      <p>{{this.area.name}}</p>
+      <h3>
+        {{#if this.code}}
+          <a href="/leagues/{{this.code}}/teams">{{this.name}}</a>
+        {{else}}
+          <span>{{this.name}}</span>
+        {{/if}}
+
+      </h3>
+      <div class="league-emblem"><img src="{{this.emblem}}" alt="League Emblem" /></div>
+    </div>
+  {{/each}}
+
+</div>
